@@ -69,6 +69,7 @@ CALL sp_top_routes_by_passenger(1000000);
 
 ## 📁 Repository Structure
 
+```
 Airport Data Analysis Project/
 │
 ├── Airport_Project_Data.csv         # Main dataset
@@ -80,6 +81,7 @@ Airport Data Analysis Project/
 ├── Busiest Airport.sql              # Busiest airport insights
 ├── Pop Vs Traffic.sql               # Population vs traffic correlation
 └── Views and Stored Procedures.sql  # Reusable SQL components
+```
 
 ---
 
