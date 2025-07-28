@@ -34,7 +34,7 @@ The aim is to explore flight and airport data to answer critical business and op
 > ⚠️ **Important Pre-step**  
 > Before running `Data_Insertion.sql`, create a table named `meta_data` from a cleaned/selected portion of `Airport_Project_Data.csv` with columns such as `AIRLINE_ID`, `ORIGIN_AIRPORT_ID`, `DEST_AIRPORT_ID`, `YEAR`, `MONTH`, `QUARTER`, `DISTANCE`, `PASSENGERS`, `FREIGHT`, `MAIL`.
 
-> Similarly, before running `City_Pop_Insert.sql`, you must create the table `all_city_pop` by extracting distinct city names and assigning population values.
+> Similarly, before running `City_Pop_Insert.sql`, create the table `all_city_pop` by extracting distinct city names and assigning population values.
 
 ### 🔍 Analytical SQL:
 - `SQL_Analysis.sql`: Includes top routes, city-level averages, and time-series analysis.
@@ -60,6 +60,8 @@ Execute any of the `.sql` files like:
 ```sql
 CALL sp_top_routes_by_passenger(1000000);
 
+---
+
 📁 Repository Structure
 Airport Data Analysis Project/
 │
@@ -73,7 +75,9 @@ Airport Data Analysis Project/
 ├── Pop Vs Traffic.sql              # Population vs traffic correlation
 └── Views and Stored Procedures.sql # Reusable SQL components
 
+---
+
 🔧 Tech Stack
-MySQL
-SQL: Joins, aggregations, views, stored procedures
-Excel/CSV: Data import/export
+- MySQL
+- SQL: Joins, aggregations, views, stored procedures
+- Excel/CSV: Data import/export
