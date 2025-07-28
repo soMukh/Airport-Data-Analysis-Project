@@ -63,7 +63,8 @@ Execute any of the `.sql` files like:
 
 ```sql
 CALL sp_top_routes_by_passenger(1000000);
-📁 Repository Structure
+
+## 📁 Repository Structure
 pgsql
 Copy
 Edit
