@@ -63,11 +63,12 @@ Execute any of the `.sql` files like:
 
 ```sql
 CALL sp_top_routes_by_passenger(1000000);
+```
+
+---
 
 ## 📁 Repository Structure
-pgsql
-Copy
-Edit
+
 Airport Data Analysis Project/
 │
 ├── Airport_Project_Data.csv         # Main dataset
@@ -79,13 +80,11 @@ Airport Data Analysis Project/
 ├── Busiest Airport.sql              # Busiest airport insights
 ├── Pop Vs Traffic.sql               # Population vs traffic correlation
 └── Views and Stored Procedures.sql  # Reusable SQL components
-🔧 Tech Stack
-MySQL
 
-SQL: Joins, aggregations, views, stored procedures
+---
 
-Excel/CSV: Data import/export
+## 🔧 Tech Stack
 
-yaml
-Copy
-Edit
+- MySQL
+- SQL: Joins, aggregations, views, stored procedures
+- Excel/CSV: Data import/export
