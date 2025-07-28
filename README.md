@@ -57,10 +57,6 @@ The aim is to explore flight and airport data to answer critical business and op
 
 ### Step 2: Run Analyses
 Execute any of the `.sql` files like:
-### Step 2: Run Analyses
-
-Execute any of the `.sql` files like:
-
 ```sql
 CALL sp_top_routes_by_passenger(1000000);
 ```
