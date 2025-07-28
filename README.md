@@ -1,6 +1,6 @@
 # 🛫 Airport Data Analysis Project
 
-This project performs in-depth SQL-based analysis on airport traffic data using city-wise passenger information, airport metadata, and population data. It includes custom SQL views, stored procedures, and data ingestion scripts — ideal for drawing insights into air traffic trends across cities and time.
+This project performs in-depth SQL-based analysis on airport traffic data using city-wise passenger information, airport metadata, and population data. It includes custom SQL views, stored procedures, and data ingestion scripts — for drawing insights into air traffic trends across cities and time.
 
 ---
 
