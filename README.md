@@ -57,27 +57,34 @@ The aim is to explore flight and airport data to answer critical business and op
 
 ### Step 2: Run Analyses
 Execute any of the `.sql` files like:
+### Step 2: Run Analyses
+
+Execute any of the `.sql` files like:
+
 ```sql
 CALL sp_top_routes_by_passenger(1000000);
-
----
-
-## 📁 Repository Structure
+📁 Repository Structure
+pgsql
+Copy
+Edit
 Airport Data Analysis Project/
 │
 ├── Airport_Project_Data.csv         # Main dataset
 ├── all_city_pop.csv                 # Population-mapped cities
 ├── Table Creation.sql               # SQL table definitions
-├── Data_Insertion.sql              # Insert queries
-├── City_Pop_Insert.sql             # Populate population data
-├── SQL_Analysis.sql                # Core analysis queries
-├── Busiest Airport.sql             # Busiest airport insights
-├── Pop Vs Traffic.sql              # Population vs traffic correlation
-└── Views and Stored Procedures.sql # Reusable SQL components
-
----
-
+├── Data_Insertion.sql               # Insert queries
+├── City_Pop_Insert.sql              # Populate population data
+├── SQL_Analysis.sql                 # Core analysis queries
+├── Busiest Airport.sql              # Busiest airport insights
+├── Pop Vs Traffic.sql               # Population vs traffic correlation
+└── Views and Stored Procedures.sql  # Reusable SQL components
 🔧 Tech Stack
-- MySQL
-- SQL: Joins, aggregations, views, stored procedures
-- Excel/CSV: Data import/export
+MySQL
+
+SQL: Joins, aggregations, views, stored procedures
+
+Excel/CSV: Data import/export
+
+yaml
+Copy
+Edit
