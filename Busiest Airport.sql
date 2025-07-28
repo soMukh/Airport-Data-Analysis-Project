@@ -17,9 +17,3 @@ ORDER BY FLIGHT_COUNT DESC
 limit 10;
 
 ## Los Angels is a part of The top 10 busiest air routes.
-
-select * from flight;
-select * from airport;
-
-
-

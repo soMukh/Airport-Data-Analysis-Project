@@ -28,30 +28,11 @@ ORDER BY Total_Flights DESC;
 select * from city;
 select * from all_city_pop;
 
-select substring_index(CityName,',',1) as City_Name,State_ABR,
-State_NM, Population
-from city c
-left join all_city_pop as a
-on a.city_name = c.Cityname;
-
-update city
-set CityName = SUBSTRING_INDEX(cityname,',',1);
-
-SET SQL_Safe_Updates = 0;
-
-select * from city;
-
-create table City_New
+create table city_new
 (select City_id,substring_index(CityName,',',1) as City_Name,State_ABR,
 State_NM, Population
 from city c
 left join all_city_pop as a
-on a.city_name = c.Cityname);
+on a.city_name = c.cityname);
 
 select * from city_new;
-
-
-
-
-
-

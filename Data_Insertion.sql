@@ -1,17 +1,17 @@
-INSERT INTO Airline (AIRLINE_ID, UNIQUE_CARRIER, UNIQUE_CARRIER_NAME, UNIQUE_CARRIER_ENTITY)
+INSERT ignore INTO airline (AIRLINE_ID, UNIQUE_CARRIER, UNIQUE_CARRIER_NAME, UNIQUE_CARRIER_ENTITY)
 SELECT DISTINCT
     AIRLINE_ID,
     UNIQUE_CARRIER,
     UNIQUE_CARRIER_NAME,
     UNIQUE_CARRIER_ENTITY
-FROM MetaData;
+FROM meta_data
+WHERE AIRLINE_ID IS NOT NULL;
 
 select distinct airline_id from airline;
-select * from meta_data;
+select * from airline;
 
-select * from airport;
 
-INSERT INTO Airport (
+INSERT INTO airport (
     AIRPORT_ID, AIRPORT_SEQ_ID, CITY_MARKET_ID, AIRPORT_CODE,
     CITY_NAME, STATE_ABR, STATE_FIPS, STATE_NM, WAC
 )
@@ -25,7 +25,7 @@ SELECT DISTINCT
     ORIGIN_STATE_FIPS,
     ORIGIN_STATE_NM,
     ORIGIN_WAC
-FROM MetaData
+FROM meta_data
 
 UNION
 
@@ -39,19 +39,12 @@ SELECT DISTINCT
     DEST_STATE_FIPS,
     DEST_STATE_NM,
     DEST_WAC
-FROM MetaData;
+FROM meta_data;
+
+select * from airport;
 
 
-
-
-
-
-
-
-
-
-
-INSERT INTO Flight (
+INSERT INTO flight (
     AIRLINE_ID, ORIGIN_AIRPORT_ID, DEST_AIRPORT_ID,
     DISTANCE, DISTANCE_GROUP,
     YEAR, QUARTER, MONTH, CLASS
@@ -66,35 +59,21 @@ SELECT
     QUARTER,
     MONTH,
     CLASS
-FROM MetaData;
+FROM meta_data;
 
 select * from flight;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-INSERT INTO FlightMetrics (
+INSERT INTO flightmetrics (
     FLIGHT_ID, PASSENGERS, FREIGHT, MAIL
 )
 SELECT
     f.FLIGHT_ID,
     m.PASSENGERS,
-    m.FREIGHT,
+    NULLIF(TRIM(m.FREIGHT), ''),
     m.MAIL
-FROM MetaData m
-JOIN Flight f
+FROM meta_data m
+JOIN flight f
   ON f.AIRLINE_ID = m.AIRLINE_ID
  AND f.ORIGIN_AIRPORT_ID = m.ORIGIN_AIRPORT_ID
  AND f.DEST_AIRPORT_ID = m.DEST_AIRPORT_ID
@@ -103,23 +82,11 @@ JOIN Flight f
  AND f.QUARTER = m.QUARTER
  AND f.DISTANCE = m.DISTANCE;
 
+
 select * from flight;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-INSERT INTO City (CityName, STATE_ABR, State_NM)
+INSERT INTO city (CityName, STATE_ABR, State_NM)
 SELECT DISTINCT
     CITY_NAME,
     STATE_ABR,

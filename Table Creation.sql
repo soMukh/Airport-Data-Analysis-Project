@@ -52,4 +52,3 @@ CREATE TABLE City (
     STATE_ABR CHAR(2),
     State_NM varchar(100) 
     );
-    
