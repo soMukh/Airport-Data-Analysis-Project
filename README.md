@@ -62,7 +62,7 @@ CALL sp_top_routes_by_passenger(1000000);
 
 ---
 
-📁 Repository Structure
+## 📁 Repository Structure
 Airport Data Analysis Project/
 │
 ├── Airport_Project_Data.csv         # Main dataset
